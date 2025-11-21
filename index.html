@@ -189,7 +189,7 @@
 
             <div class="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-between">
               <div class="flex justify-between items-start">
-                <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">cFIX</h3>
+                <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900"></h3>
                 <span
                   class="text-xs font-bold uppercase tracking-widest border px-3 py-1 rounded-full text-slate-900 border-slate-900/20">SaaS
                   Platform</span>
@@ -509,11 +509,15 @@
         </article>
 
         <!-- Coming Soon -->
-        <div
-          class="w-full py-24 bg-slate-50 rounded-2xl border border-dashed border-slate-300 flex flex-col items-center justify-center text-center">
-          <span class="text-slate-400 font-medium mb-2">Coming Soon</span>
-          <h3 class="text-2xl font-bold text-slate-900">New Commerce Project</h3>
+        <!-- PDF viewer (iframe) -->
+        <div class="w-full py-6 rounded-2xl border border-slate-300 flex items-center justify-center">
+          <div class="w-full max-w-4xl h-[600px] rounded-lg overflow-hidden border">
+            <iframe src="./docs/BROCHURE.pdf" class="w-full h-full" style="border:0;"
+              title="Commerce Project PDF" allowfullscreen>
+            </iframe>
+          </div>
         </div>
+
 
       </div>
     </section>
