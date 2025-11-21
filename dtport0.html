@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anas Julfikar — Portfolio</title>
+  <meta name="description" content="Anas Julfikar — UI/UX Designer & Visual Creator. Portfolio including cFix & Al Fariya case studies, cinematography and photography." />
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Simple marquee animation */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee { animation: marquee 20s linear infinite; }
+    /* small helpers for focus ring */
+    .focus-ring:focus { outline: 3px solid rgba(59,130,246,0.25); outline-offset: 2px; border-radius: 0.375rem; }
+  </style>
+</head>
+<body class="bg-white min-h-screen font-sans selection:bg-slate-900 selection:text-white">
+
+  <!-- NAV -->
+  <nav role="navigation" class="fixed top-0 w-full bg-slate-50/90 backdrop-blur-md z-50 border-b border-slate-200/50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <div class="text-xl font-bold tracking-tighter text-slate-900">ANAS JULFIKAR</div>
+
+      <!-- Desktop -->
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#work" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Work</a>
+        <a href="#about" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">About</a>
+        <a href="#visual-lab" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Visual Lab</a>
+        <a href="#contact" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Contact</a>
+
+        <a href="#contact" class="ml-4">
+          <button class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-slate-800 transition-all">Work with me</button>
+        </a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button id="mobile-toggle" class="md:hidden text-slate-900 focus-ring" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <!-- Menu icon -->
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 flex flex-col gap-4 md:hidden hidden" role="menu" aria-hidden="true">
+      <a href="#work" class="text-lg font-medium text-slate-900" role="menuitem">Work</a>
+      <a href="#about" class="text-lg font-medium text-slate-900" role="menuitem">About</a>
+      <a href="#visual-lab" class="text-lg font-medium text-slate-900" role="menuitem">Visual Lab</a>
+      <a href="#contact" class="text-lg font-medium text-slate-900" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="pt-40 pb-24 px-6 max-w-7xl mx-auto min-h-[80vh] flex flex-col justify-center">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-2 hidden md:block">
+          <div class="w-12 h-1 bg-slate-900 mb-6"></div>
+          <span class="text-xs font-bold tracking-widest uppercase text-slate-400 rotate-90 origin-left translate-y-20 translate-x-2 block">Scroll Down</span>
+        </div>
+
+        <div class="md:col-span-8">
+          <h1 class="text-5xl md:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tight mb-8">
+            Hi, I'm Anas — <br />
+            <span class="text-slate-400">UI/UX Designer</span> & <br />
+            Product Creator.
+          </h1>
+
+          <p class="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mb-12">
+            I bring a multidisciplinary approach to digital products. From
+            <span class="text-slate-900 font-medium"> complex systems</span> (cFix) to
+            <span class="text-slate-900 font-medium"> accessible healthcare</span> (Al Fariya),
+            I design stories people believe in.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="#work" aria-label="See work" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-slate-100 text-slate-900 hover:bg-slate-900 hover:text-white transition-all duration-300">
+              <!-- Arrow rotated -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transform rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 flex flex-col justify-end items-end">
+          <div class="w-32 h-32 bg-slate-200 rounded-full overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+            <img src="imagess/dp1.jpeg" alt="Profile Portrait" class="w-full h-full object-cover rounded-full">
+          </div>
+          <span class="text-xs font-medium text-slate-400 mt-2">Based in India</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="py-12 border-y border-slate-200 overflow-hidden bg-white">
+      <div class="flex gap-16 animate-marquee whitespace-nowrap opacity-40">
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">FIGMA</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">REACT</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">PYTHON</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">UI DESIGN</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">CINEMATOGRAPHY</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">PROTOTYPING</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">DATA VIZ</span>
+        <!-- Repeat for smooth loop -->
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">FIGMA</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">REACT</span>
+        <span class="text-4xl font-bold tracking-tighter text-slate-900 mr-16">PYTHON</span>
+      </div>
+    </div>
+
+    <!-- PHILOSOPHY (ABOUT) -->
+    <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-sm font-bold tracking-widest uppercase text-slate-400 mb-4">My Philosophy</h2>
+          <h3 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">I transform <br/> logic into experience.</h3>
+        </div>
+        <div class="flex flex-col justify-end">
+          <p class="text-lg text-slate-600 leading-relaxed mb-8">
+            Design is not just about how it looks; it's about how it works.
+            With a background in <strong class="text-slate-900">technical programming</strong> (Python, C++) and a passion for <strong class="text-slate-900">visual storytelling</strong>, I define, design, and launch ideas that unlock hidden potential.
+          </p>
+          <a href="#contact" class="text-slate-900 font-bold underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">Meet Anas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK (CASE STUDIES) -->
+    <section id="work" class="py-12 px-6 max-w-7xl mx-auto">
+      <div class="flex justify-between items-end mb-12">
+        <h2 class="text-sm font-bold tracking-widest uppercase text-slate-400">Recent Work</h2>
+      </div>
+
+      <div class="space-y-12">
+
+        <!-- Project Card: cFix -->
+        <article class="group relative w-full rounded-2xl transition-all duration-500 overflow-hidden bg-slate-100">
+          <div class="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden transition-all duration-500">
+            <img src="imagess/dp12.jpeg" alt="cFix website screenshot" class="absolute inset-0 w-full h-full object-cover z-5">
+            <div class="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-between">
+              <div class="flex justify-between items-start">
+                <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">cFIX</h3>
+                <span class="text-xs font-bold uppercase tracking-widest border px-3 py-1 rounded-full text-slate-900 border-slate-900/20">SaaS Platform</span>
+              </div>
+
+              <div>
+                <p class="text-xl md:text-2xl max-w-md mb-8 leading-snug text-slate-600">
+                  Streamlining issue tracking for agile teams.
+                </p>
+                <button class="project-toggle inline-flex px-6 py-3 rounded-full text-sm font-bold transition-all items-center gap-2 bg-slate-900 text-white hover:bg-blue-600" data-target="cfix-details" aria-expanded="false">
+                  View Details
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="absolute inset-0 z-10 transition-transform duration-700 group-hover:scale-105 bg-gradient-to-br from-slate-200 to-slate-300"></div>
+          </div>
+
+          <!-- Expandable Details -->
+          <section id="cfix-details" class="hidden bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto p-8 md:p-12 grid md:grid-cols-12 gap-12">
+              <aside class="md:col-span-3">
+                <div class="sticky top-24 space-y-2">
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Role</h4><p class="text-slate-900 font-medium">Lead UI/UX Designer</p></div>
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Timeline</h4><p class="text-slate-900 font-medium">4 Weeks</p></div>
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tools</h4><p class="text-slate-900 font-medium">Figma, Illustrator</p></div>
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Outcome</h4><p class="text-slate-900 font-medium">High-fidelity Prototype</p></div>
+                </div>
+              </aside>
+
+              <div class="md:col-span-9 space-y-16">
+                <div class="border-l-2 border-slate-900 pl-6">
+                  <h4 class="text-xl font-bold text-slate-900 mb-4">Overview</h4>
+                  <p class="text-lg text-slate-600 leading-relaxed">CFix is a digital platform designed to streamline hostel-related processes at Aligarh Muslim University (AMU). The system replaces traditional manual workflows for complaints, hostel applications, and communication, creating a smoother, more transparent, and user-friendly experience.</p>
+                </div>
+
+                <div class="border-l-2 border-slate-900 pl-6">
+                  <h4 class="text-xl font-bold text-slate-900 mb-4">Problem Space</h4>
+                  <p class="text-lg text-slate-600 leading-relaxed mb-4">Through user interviews and process analysis (students, wardens, hostel administration):</p>
+                  <ul class="space-y-2 text-slate-600 text-sm">
+                    <li>• Complaints were handled manually → slow updates & no tracking.</li>
+                    <li>• Hostel forms like leave, room change, and medical applications were on paper → prone to loss & delays.</li>
+                    <li>• No centralized dashboard for wardens/admins → difficult to manage workload.</li>
+                    <li>• Students had no visibility into status → constant follow-ups.</li>
+                    <li>• No audit trail or proper documentation for record keeping.</li>
+                  </ul>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div class="bg-slate-50 p-6 rounded-xl">
+                    <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2"><svg class="w-5 h-5 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.9 0 5.585.9 7.879 2.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Target Users</h4>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>Students (primary users)</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>Wardens (complaint handlers)</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>Provost / DSW (escalation & approvals)</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>IT Staff (system maintenance)</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-slate-50 p-6 rounded-xl">
+                    <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg> Key Features</h4>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Role-Based Dashboards</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Smart Complaint Submission</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Online Application Forms</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Real-Time Notifications</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xl font-bold text-slate-900 mb-6">Design Process & UI</h4>
+                  <p class="text-slate-600 mb-8 leading-relaxed">I began with grayscale wireframes focusing on form clarity, clear hierarchy, and minimal cognitive load. The high-fidelity design uses color-coding for statuses (Pending, Processing, Resolved), card-based dashboards, and WCAG 2.1 compliant typography.</p>
+                  <div class="grid grid-cols-3 gap-4">
+                    <div class="aspect-[9/16] bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 text-xs">Wireframe 1</div>
+                    <div class="aspect-[9/16] bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 text-xs">Dashboard UI</div>
+                    <div class="aspect-[9/16] bg-slate-100 rounded-lg border border-slate-200 flex items-center justify-center text-slate-400 text-xs">Form UI</div>
+                  </div>
+                </div>
+
+                <div class="border-l-2 border-slate-900 pl-6">
+                  <h4 class="text-xl font-bold text-slate-900 mb-4">Outcome & Impact</h4>
+                  <p class="text-lg text-slate-600 leading-relaxed">From pilot testing: Students reported less confusion & fewer follow-ups. Staff experienced faster resolution workflows. ~1.5 second average response time achieved. Centralized records improved auditing & administration.</p>
+                </div>
+
+                <div class="border-l-2 border-slate-900 pl-6">
+                  <h4 class="text-xl font-bold text-slate-900 mb-4">GitHub Repository</h4>
+                  <p class="text-lg text-slate-600 leading-relaxed mb-4">View the source code and project details on GitHub.</p>
+                  <a href="https://github.com/anas36427/cFix.git" target="_blank" class="inline-flex px-6 py-3 rounded-full text-sm font-bold transition-all items-center gap-2 bg-slate-900 text-white hover:bg-blue-600">
+                    View Repository
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!-- Project Card: Video Content -->
+        <article class="group relative w-full rounded-2xl transition-all duration-500 overflow-hidden bg-slate-100">
+          <div class="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden transition-all duration-500">
+            <img src="imagess/dp1.jpeg" alt="Video Content website screenshot" class="absolute inset-0 w-full h-full object-cover z-5">
+            <div class="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-between">
+              <div class="flex justify-between items-start">
+                <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">VIDEO CONTENT</h3>
+                <div class="flex flex-col items-end gap-2">
+                  <span class="text-xs font-bold uppercase tracking-widest border px-3 py-1 rounded-full text-slate-900 border-slate-900/20">Multimedia</span>
+                  <!-- <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">LIVE</span> -->
+                </div>
+              </div>
+
+              <div>
+                <p class="text-xl md:text-2xl max-w-md mb-8 leading-snug text-slate-600">
+                  Showcasing visual storytelling through videos.
+                </p>
+                <button class="project-toggle inline-flex px-6 py-3 rounded-full text-sm font-bold transition-all items-center gap-2 bg-slate-900 text-white hover:bg-blue-600" data-target="video-details" aria-expanded="false">
+                  View Videos
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="absolute inset-0 z-10 transition-transform duration-700 group-hover:scale-105 bg-gradient-to-br from-slate-200 to-slate-300"></div>
+          </div>
+
+          <!-- Expandable Details -->
+          <section id="video-details" class="hidden bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto p-8 md:p-12 grid md:grid-cols-12 gap-12">
+              <aside class="md:col-span-3">
+                <div class="sticky top-24 space-y-2">
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Role</h4><p class="text-slate-900 font-medium">Content Creator</p></div>
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Timeline</h4><p class="text-slate-900 font-medium">Ongoing</p></div>
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tools</h4><p class="text-slate-900 font-medium">Camera, Editing Software</p></div>
+                  <div class="mb-6"><h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Outcome</h4><p class="text-slate-900 font-medium">Embedded Video Gallery</p></div>
+                </div>
+              </aside>
+
+              <div class="md:col-span-9 space-y-16">
+                <div class="grid md:grid-cols-2 gap-8">
+                  <div class="bg-slate-50 p-6 rounded-xl">
+                    <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2"><svg class="w-5 h-5 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 15c2.9 0 5.585.9 7.879 2.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Target Users</h4>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>Potential clients seeking visual work</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>Viewers interested in cinematography</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-purple-600 rounded-full shrink-0"></span>Colleagues and collaborators</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-slate-50 p-6 rounded-xl">
+                    <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2"><svg class="w-5 h-5 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg> Key Features</h4>
+                    <ul class="space-y-2 text-slate-600 text-sm">
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Embedded YouTube videos</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Instagram reel embeds</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Responsive video gallery</li>
+                      <li class="flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0"></span>Accessible playback controls</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 class="text-xl font-bold text-slate-900 mb-6">Video Gallery</h4>
+                  <p class="text-slate-600 mb-8 leading-relaxed">A curated selection of videos showcasing my work in cinematography and visual storytelling. Embedded directly for seamless viewing.</p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <!-- YouTube Video -->
+                    <div class="aspect-video bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OEbetqtYp9I?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <!-- Instagram Reel 1 -->
+                    <div class="aspect-square bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CvuieZ0JJnq/?igsh=MTBlN25xZmU3ZGV3bA==" data-instgrm-version="14" style="max-width:100%; width:100%; height:100%; border:0;"></blockquote>
+                    </div>
+                    <!-- Instagram Reel 2 -->
+                    <div class="aspect-square bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CoxbxcNp_AE/?igsh=MXQ0ZWtycmY0MnU1dQ==" data-instgrm-version="14" style="max-width:100%; width:100%; height:100%; border:0;"></blockquote>
+                    </div>
+                    <!-- Instagram Reel 3 -->
+                    <div class="aspect-square bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CjvBhnGP17B/?igsh=dXpvbGIxb3RobGI=" data-instgrm-version="14" style="max-width:100%; width:100%; height:100%; border:0;"></blockquote>
+                    </div>
+                  </div>
+                  <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!-- Coming Soon -->
+        <div class="w-full py-24 bg-slate-50 rounded-2xl border border-dashed border-slate-300 flex flex-col items-center justify-center text-center">
+          <span class="text-slate-400 font-medium mb-2">Coming Soon</span>
+          <h3 class="text-2xl font-bold text-slate-900">New Commerce Project</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VISUAL LAB -->
+    <section id="visual-lab" class="py-32 bg-slate-950 text-white mt-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <span class="text-blue-500 font-bold tracking-widest uppercase text-xs mb-4 block">The Creative Lab</span>
+            <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">The Darkroom.</h2>
+            <p class="text-slate-400 text-lg max-w-md">A hidden library of explorations, cinematography, writings, and unfolding ideas. Where logic meets the lens.</p>
+          </div>
+          <div class="flex md:justify-end">
+            <a href="https://www.instagram.com/_anas_clix_?igsh=aDMxZ25wNWo5MjVm" class="px-8 py-4 border border-white/20 rounded-full hover:bg-white hover:text-slate-950 transition-all font-medium inline-block">Explore Gallery</a>
+          </div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 md:grid-rows-2 gap-4 h-[600px] md:h-[500px]">
+          <div class="col-span-2 row-span-2 bg-slate-900 rounded-2xl overflow-hidden relative group border border-slate-800 hover:border-slate-600 transition-all">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <!-- Camera icon -->
+              <svg class="w-16 h-16 text-slate-700 group-hover:text-blue-500 opacity-50 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h2l2-3h6l2 3h2a2 2 0 012 2v9a2 2 0 01-2 2H3a2 2 0 01-2-2V9a2 2 0 012-2z"/><circle cx="12" cy="13" r="3" /></svg>
+            </div>
+            <div class="absolute bottom-6 left-6 z-20">
+              <span class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-1 block">Cinematography</span>
+              <h4 class="text-2xl font-bold text-white">Urban Silence Reel</h4>
+            </div>
+          </div>
+
+          <div class="col-span-1 row-span-1 bg-slate-800 rounded-2xl overflow-hidden relative group border border-slate-700 hover:border-slate-500 transition-all">
+            <img src="imagess/mosq.png" alt="Portrait" class="w-full h-full object-cover">
+            <div class="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+              <h4 class="text-sm font-bold text-white">Portraits</h4>
+            </div>
+          </div>
+
+          <div class="col-span-1 row-span-1 bg-slate-800 rounded-2xl overflow-hidden relative group border border-slate-700 hover:border-slate-500 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center text-slate-600">Experiments</div>
+            <div class="absolute bottom-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+              <h4 class="text-sm font-bold text-white">3D Renders</h4>
+            </div>
+          </div>
+
+          <div class="col-span-2 row-span-1 bg-slate-900 rounded-2xl overflow-hidden relative group border border-slate-800 hover:border-slate-600 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center text-slate-700">
+              <!-- Code icon -->
+              <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 18l6-6-6-6M8 6L2 12l6 6"/></svg>
+            </div>
+            <div class="absolute bottom-4 left-6 z-20">
+              <h4 class="text-lg font-bold text-white">Code & Motion</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact" class="bg-white pt-32 pb-12 px-6 border-t border-slate-100">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-6">
+          <div class="mb-12">
+            <div class="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold mb-6">AJ</div>
+            <h2 class="text-4xl font-bold text-slate-900 mb-4">Work with me.</h2>
+            <p class="text-slate-500 max-w-sm">Currently available for UI/UX projects and visual storytelling commissions.</p>
+          </div>
+          <div class="flex gap-6">
+            <a href="mailto:anas36427@gmail.com" aria-label="Email" class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-900 hover:text-white transition-all">
+              <!-- Mail icon -->
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/anas-julfikar-2853ba22b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn" class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all">
+              <!-- LinkedIn icon -->
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 5 3.8 6.24 2.28 6.24 1.02 6.24 0 5.16 0 3.92 0 2.68 1.02 1.6 2.28 1.6c1.52 0 2.7 1.24 2.7 1.9zM.5 8.5h4.96V24H.5zM8.5 8.5h4.76v2.09h.07c.66-1.25 2.28-2.57 4.7-2.57 5.02 0 5.95 3.3 5.95 7.59V24H19.5V16.3c0-1.85-.03-4.23-2.57-4.23-2.57 0-2.96 2-2.96 4.07V24H8.5z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/_anas_clix_?igsh=aDMxZ25wNWo5MjVm" aria-label="Instagram" class="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all">
+              <!-- Instagram icon -->
+              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1016.5 13 4.51 4.51 0 0012 8.5zM19 6.5a1 1 0 11-1-1 1 1 0 011 1z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="font-bold text-slate-900 mb-6">Sitemap</h4>
+          <ul class="space-y-4 text-slate-500 text-sm">
+            <li><a href="#home" class="hover:text-slate-900">Home</a></li>
+            <li><a href="#work" class="hover:text-slate-900">Work</a></li>
+            <li><a href="#about" class="hover:text-slate-900">About</a></li>
+            <li><a href="#visual-lab" class="hover:text-slate-900">Visual Lab</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <h4 class="font-bold text-slate-900 mb-6">Newsletter</h4>
+          <p class="text-sm text-slate-500 mb-4">Weekly thoughts on design, code, and the hidden patterns of user behavior.</p>
+          <form id="newsletter-form" class="flex gap-2" onsubmit="return false;">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" placeholder="Email address" required class="bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 w-full text-sm focus:outline-none focus:border-slate-900 transition-colors" />
+            <button type="submit" class="bg-slate-900 text-white px-6 py-3 rounded-lg text-sm font-bold hover:bg-slate-800">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-100 flex justify-between text-xs text-slate-400">
+        <span>© 2025 Anas Julfikar</span>
+        <span>Designed with static HTML & Tailwind</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Minimal JS for interactions -->
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    let mobileOpen = false;
+    mobileToggle.addEventListener('click', () => {
+      mobileOpen = !mobileOpen;
+      mobileMenu.classList.toggle('hidden', !mobileOpen);
+      mobileToggle.setAttribute('aria-expanded', String(mobileOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!mobileOpen));
+      // Swap icon (menu <-> x)
+      mobileToggle.innerHTML = mobileOpen ? '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>';
+    });
+
+    // Close mobile menu when clicking a mobile menu link
+    document.querySelectorAll('#mobile-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileToggle.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>';
+        mobileOpen = false;
+      });
+    });
+
+    // Project card toggles
+    document.querySelectorAll('.project-toggle').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const targetId = btn.getAttribute('data-target');
+        const el = document.getElementById(targetId);
+        if (!el) return;
+        const expanded = el.classList.contains('hidden') === false;
+        // collapse any open sections first (optional)
+        document.querySelectorAll('section[id$="-details"]').forEach(s => {
+          if (s !== el) s.classList.add('hidden');
+        });
+        if (expanded) {
+          el.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.innerHTML = 'View Case Study <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>';
+        } else {
+          el.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          btn.innerHTML = 'Close Case Study <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>';
+          // scroll to the opened section
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      });
+    });
+
+    // Newsletter form handler
+    const form = document.getElementById('newsletter-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('newsletter-email').value;
+        // TODO: integrate with Mailchimp / API
+        alert('Thanks! You signed up with: ' + email);
+        form.reset();
+      });
+    }
+
+    // Simple: close details when clicking outside (optional)
+    document.addEventListener('click', (e) => {
+      const openSection = document.querySelector('section[id$="-details"]:not(.hidden)');
+      if (!openSection) return;
+      if (openSection.contains(e.target)) return;
+      // if click outside of any .project-toggle or details, close
+      const isToggle = e.target.closest('.project-toggle');
+      if (!isToggle) {
+        openSection.classList.add('hidden');
+        document.querySelectorAll('.project-toggle').forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+      }
+    });
+  </script>
+</body>
+</html>
