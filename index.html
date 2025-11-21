@@ -361,11 +361,11 @@
         <!-- Project Card: Video Content -->
         <article class="group relative w-full rounded-2xl transition-all duration-500 overflow-hidden bg-slate-100">
           <div class="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden transition-all duration-500">
-            <img src="imagess/dp1.jpeg" alt="Video Content website screenshot"
+            <img src="imagess/col1.png" alt="Video Content website screenshot"
               class="absolute inset-0 w-full h-full object-cover z-5">
             <div class="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-between">
               <div class="flex justify-between items-start">
-                <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">VIDEO CONTENT</h3>
+                <h3 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">CONTENT</h3>
                 <div class="flex flex-col items-end gap-2">
                   <span
                     class="text-xs font-bold uppercase tracking-widest border px-3 py-1 rounded-full text-slate-900 border-slate-900/20">Multimedia</span>
@@ -374,9 +374,6 @@
               </div>
 
               <div>
-                <p class="text-xl md:text-2xl max-w-md mb-8 leading-snug text-slate-600">
-                  Showcasing visual storytelling through videos.
-                </p>
                 <button
                   class="project-toggle inline-flex px-6 py-3 rounded-full text-sm font-bold transition-all items-center gap-2 bg-slate-900 text-white hover:bg-blue-600"
                   data-target="video-details" aria-expanded="false">
@@ -510,13 +507,77 @@
 
         <!-- Coming Soon -->
         <!-- PDF viewer (iframe) -->
-        <div class="w-full py-6 rounded-2xl border border-slate-300 flex items-center justify-center">
+        <!-- <div class="w-full py-6 rounded-2xl border border-slate-300 flex items-center justify-center">
           <div class="w-full max-w-4xl h-[600px] rounded-lg overflow-hidden border">
             <iframe src="./docs/BROCHURE.pdf" class="w-full h-full" style="border:0;"
               title="Commerce Project PDF" allowfullscreen>
             </iframe>
           </div>
+        </div> -->
+
+
+        <!-- Enhanced Brochure section -->
+<section class="w-full py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 md:p-8">
+      <div class="md:flex md:items-center md:justify-between gap-6">
+        <!-- Left: Title / description -->
+        <div class="md:flex-1">
+          <h3 class="text-lg text-slate-500 font-semibold">Project Brochure</h3>
+          <h2 class="mt-2 text-2xl md:text-3xl font-extrabold text-slate-900">MCA Batch Placement Brochure</h2>
+          <p class="mt-3 text-sm text-slate-600 max-w-2xl">
+            A brochure I designed as the TPO to showcase our MCA cohort to hiring companies — contains program highlights,
+            student achievements, and placement statistics. Scroll through the PDF below or download it for offline review.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-3 items-center">
+            <a id="download-brochure" href="./docs/BROCHURE.pdf" download class="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition">
+              <!-- download icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" /></svg>
+              Download Brochure
+            </a>
+
+            <button id="open-new-tab" class="inline-flex items-center gap-2 border border-slate-200 px-4 py-2 rounded-lg text-sm text-slate-700 hover:bg-slate-50 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h7v7m0 0L10 21 3 14 14 3z"/></svg>
+              Open in new tab
+            </button>
+
+            <button id="toggle-fullscreen" class="ml-auto md:ml-0 inline-flex items-center gap-2 bg-white border border-slate-200 px-3 py-2 rounded-lg text-sm text-slate-700 hover:bg-slate-50 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" id="fs-icon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 3H5a2 2 0 00-2 2v3m0 8v3a2 2 0 002 2h3M16 3h3a2 2 0 012 2v3M21 16v3a2 2 0 01-2 2h-3"/>
+              </svg>
+              Fullscreen
+            </button>
+          </div>
         </div>
+
+        <!-- Right: framed PDF viewer -->
+        <div class="md:w-[640px] mt-6 md:mt-0 md:flex-shrink-0">
+          <div id="pdf-frame-wrapper" class="relative rounded-lg overflow-hidden border border-slate-200 shadow-sm h-[420px] md:h-[480px]">
+            <!-- iframe uses local path you provided (works for local testing).
+                 Replace with relative path when deploying (e.g. ./docs/BROCHURE.pdf) -->
+            <iframe id="brochure-iframe"
+                    src="./docs/BROCHURE.pdf"
+                    class="w-full h-full bg-slate-50"
+                    style="border:0;"
+                    title="MCA Placement Brochure"
+                    aria-label="MCA batch placement brochure embedded PDF"
+                    sandbox="allow-same-origin allow-scripts allow-forms"
+            ></iframe>
+
+            <!-- small floater: quick download -->
+            <a href="./docs/BROCHURE.pdf" download class="absolute right-3 bottom-3 inline-flex items-center gap-2 bg-white border border-slate-200 px-3 py-2 text-xs rounded-lg shadow">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M21 12v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6" /></svg>
+              Download
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
       </div>
@@ -733,7 +794,49 @@
     }
 
 
+(function(){
+    const iframe = document.getElementById('brochure-iframe');
+    const openBtn = document.getElementById('open-new-tab');
+    const fsBtn = document.getElementById('toggle-fullscreen');
+    const wrapper = document.getElementById('pdf-frame-wrapper');
+    const downloadLinks = document.querySelectorAll('a[href="./docs/BROCHURE.pdf"]');
 
+    // Open in new tab
+    openBtn.addEventListener('click', () => {
+      // open the local path in a new tab (for local testing)
+      window.open('./docs/BROCHURE.pdf', '_blank', 'noopener');
+    });
+
+    // Set download links attribute (keeps same path for now)
+    downloadLinks.forEach(a => {
+      a.setAttribute('href', './docs/BROCHURE.pdf');
+      a.setAttribute('download', 'MCA_BROCHURE.pdf');
+    });
+
+    // Fullscreen toggle (uses Fullscreen API)
+    let isFs = false;
+    fsBtn.addEventListener('click', async () => {
+      try {
+        if (!isFs) {
+          if (wrapper.requestFullscreen) await wrapper.requestFullscreen();
+          else if (wrapper.webkitRequestFullscreen) await wrapper.webkitRequestFullscreen();
+          fsBtn.querySelector('#fs-icon').innerHTML = ''; // optional change
+        } else {
+          if (document.exitFullscreen) await document.exitFullscreen();
+          else if (document.webkitExitFullscreen) await document.webkitExitFullscreen();
+        }
+        isFs = !isFs;
+      } catch (err) {
+        console.error('Fullscreen error', err);
+      }
+    });
+
+    // Improve iframe scrolling UX on mobile: allow touch if needed
+    iframe.addEventListener('load', () => {
+      // optionally show message or remove blocked poster
+      console.log('PDF loaded in iframe');
+    });
+  })();
     (function () {
       // Use explicit relative paths (relative to the HTML file)
       const imgs = [
